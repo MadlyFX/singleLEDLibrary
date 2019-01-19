@@ -14,7 +14,7 @@ class sllib
         sllib(int pin);
 
         //breathing
-        void breathSingle(int speed);
+        void breathSingle(int speed, int min, int max);
 
         //blink
         void blinkSingle(int speed);
@@ -45,6 +45,8 @@ class sllib
         unsigned long milOld;
         int runningFunction = 0;
         int speedp;
+        int min;
+        int max;
         int timep;
         //int pPatt[];
         int* arrP = 0;
