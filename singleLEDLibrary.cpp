@@ -16,7 +16,7 @@ void sllib::update(){
             patternSingle(arrP,speedp);
         break;
         case 2:
-            breathSingle(speedp);
+            breathSingle(speedp, min, max);
         break;
         case 3:
             flickerSingle();
@@ -95,6 +95,7 @@ void sllib::breathSingle(int speed){
         milOld = millis();
         float it = 0;
         it = (exp(sin(millis()/(float)speed*PI)) - 0.36787944)*108.0;
+        it = map(it, 0, 255, min, max);
         analogWrite(_pin, it);
     }
 }
