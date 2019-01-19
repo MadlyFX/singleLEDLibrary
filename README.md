@@ -1,6 +1,4 @@
-# Non Interupting Single LED Library
-This is an arduino library meant to make it easier to implement simple lighting effects that do not interrupt the rest of the program with the dreaded `delay()` function.
-The functions in the library can be called in 2 ways. One way treats the function like a *state change*. This essentially means that you use a command once to change the behaviour of that LED. Everything else is then handled by the `obj.update()` command. The other way is to call the functions yourself as part of your *program loop*. This means that the `obj.update()` function is not needed but does allow for more control over what the LED will be doing. These two methods can be used together. **Do not worry there are examples further down!**
+Fork of SingleLEDLibrary to add a few more functions. Currently only a a minimum and maximum bound for the Breathing function.
 
 ### Before you start
 Keep in mind that the blink functions will work on digital ports but everything else needs a PWM enabled port. (Look for the `~` symbol on your Arduino.)
